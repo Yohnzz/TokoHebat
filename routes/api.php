@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Route;
 Route::post('/register', [AuthController::class,'register']);
 Route::post('/login', [AuthController::class,'login']);
 
-Route::prefix('admin')->group(function(){
+Route::prefix('admin')->middleware(['auth:sanctum','role:admin'])->group(function(){
     Route::apiResource('/kategori', KategoriController::class);
     Route::apiResource('/produk', ProdukController::class);
 });

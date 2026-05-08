@@ -21,6 +21,7 @@ class AuthController extends Controller
         try{
             $request->validated();
             $register = $this->handler->register($request);
+            
             return ResponseHelper::success($register,__('auth.register_success'));
         } catch (\Throwable $e){
             return ResponseHelper::error(null, __('auth.fail_register'). $e->getMessage());
@@ -31,6 +32,9 @@ class AuthController extends Controller
         try {
             $request->validated();
            $login = $this->handler->login($request);
+                if(!$login){
+                    return ResponseHelper::error(null, __('auth.invalid_credentials'), 401);
+                }
             return ResponseHelper::success($login, __('auth.login_success'));
         } catch (\Throwable $e) {
             return ResponseHelper::error(null,__('auth.fail_login'). $e->getMessage());

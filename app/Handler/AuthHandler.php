@@ -2,6 +2,7 @@
 namespace App\Handler;
 
 use App\Interface\AuthInterface;
+use Illuminate\Support\Facades\Hash;
 
 class AuthHandler{
     protected $repo;
@@ -13,14 +14,14 @@ class AuthHandler{
         return $this->repo->create([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => $request->password,
+            'password' => bcrypt($request->password),
         ]);
     }
     
     public function login($request){
         $user = $this->repo->getEmail($request->email);
 
-        if(!$user){
+        if(!$user || !Hash::check($request->password, $user->password)){
             return null;
         }
         

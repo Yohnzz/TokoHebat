@@ -21,4 +21,7 @@ class Produk extends Model
     ];
      public $timestamps = true;
      public $incrementing = false;
+        public function kategori(){
+            return $this->belongsTo(Kategori::class, 'id_kategori_produk', 'id_kategori_produk');
+        }
 }
