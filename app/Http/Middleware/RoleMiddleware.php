@@ -17,8 +17,9 @@ class RoleMiddleware
     {
          if (!$request->user() || !in_array($request->user()->role, $roles)) {
         return response()->json([
-            "message" => "Role Anda Tidak cocok"
-        ], 403);
+            "message" => __('alert.role_denied')
+        ], 401);
+
     }
         return $next($request);
     }

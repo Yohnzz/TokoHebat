@@ -21,5 +21,5 @@ return[
     'fail_show_kategori' => 'Gagal Menampilkan Detail Data Kategori',
     'fail_update_kategori' => 'Gagal Memperbarui Data Kategori',
     'fail_destroy_kategori' => 'Gagal Menghapus Kategori Karena Kategori Sedang Digunakan Oleh Produk',
-
-];
+    'role_denied' => 'Akses ditolak! Role Anda tidak memiliki izin untuk mengakses halaman ini.',
+];

@@ -1,0 +1,25 @@
+<?php
+return [
+    'success_index_produk' => 'Successfully Fetched All Product Data',
+    'success_store_produk' => 'Successfully Added Product Data',
+    'success_show_produk' => 'Successfully Fetched Product Details',
+    'success_update_produk' => 'Successfully Updated Product Data',
+    'success_destroy_produk' => 'Successfully Deleted Product Data',
+    'fail_index_produk' => 'Failed to Fetch All Product Data',
+    'fail_store_produk' => 'Failed to Add Product Data',
+    'fail_show_produk' => 'Failed to Fetch Product Details',
+    'fail_update_produk' => 'Failed to Update Product Data',
+    'fail_destroy_produk' => 'Failed to Delete Product Data',
+
+    'success_index_kategori' => 'Successfully Fetched All Category Data',
+    'success_store_kategori' => 'Successfully Added Category Data',
+    'success_show_kategori' => 'Successfully Fetched Category Details',
+    'success_update_kategori' => 'Successfully Updated Category Data',
+    'success_destroy_kategori' => 'Successfully Deleted Category Data',
+    'fail_index_kategori' => 'Failed to Fetch All Category Data',
+    'fail_store_kategori' => 'Failed to Add Category Data',
+    'fail_show_kategori' => 'Failed to Fetch Category Details',
+    'fail_update_kategori' => 'Failed to Update Category Data',
+    'fail_destroy_kategori' => 'Failed to Delete Category because it is being used by Products',
+    'role_denied' => 'Access Denied! Your role does not have permission to access this page.',
+];
