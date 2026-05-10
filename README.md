@@ -97,11 +97,3 @@ Berikut adalah langkah-langkah teknis yang telah diimplementasikan di branch `co
    ```bash
    php artisan serve
    ```
-
----
-
-## 👨‍💻 Kontributor
-**Mario** - Developer In-House TokoHebat
-
----
-*Catatan: Pastikan untuk menambahkan gambar pendukung di folder `assets/` sesuai dengan placeholder yang disediakan di atas agar dokumentasi lebih informatif.*
